@@ -7,7 +7,7 @@ if [[ $# -lt 2 ]]; then
   echo
   echo "Environment variables:"
   echo "  FAL_KEY=...                        # required"
-  echo "  MODEL=fal-ai/seedance/v1/pro/text-to-video   # optional default"
+  echo "  MODEL=bytedance/seedance-2.0/text-to-video   # optional default"
   echo
   echo "Examples:"
   echo "  $0 prompts/founder.txt founder-intro"
@@ -18,7 +18,7 @@ fi
 PROMPT_FILE="$1"
 OUTPUT_NAME="$2"
 IMAGE_REF="${3:-}"
-MODEL="${MODEL:-fal-ai/seedance/v1/pro/text-to-video}"
+MODEL="${MODEL:-bytedance/seedance-2.0/text-to-video}"
 
 if [[ ! -f "$PROMPT_FILE" ]]; then
   echo "Prompt file not found: $PROMPT_FILE" >&2
